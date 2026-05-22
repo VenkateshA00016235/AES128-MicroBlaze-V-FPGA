@@ -1,14 +1,13 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x41DC2F157FCF2AED",
+      "boundary_crc": "0x5BCB3B28B67EFC8",
       "device": "xc7z010clg400-1",
       "gen_directory": "../../../../project_1.gen/sources_1/bd/AES128_System",
       "name": "AES128_System",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2025.2",
-      "validated": "true"
+      "tool_version": "2025.2"
     },
     "design_tree": {
       "microblaze_riscv_0": "",
@@ -24,7 +23,8 @@
       "microblaze_riscv_0_xlconcat": "",
       "mdm_1": "",
       "clk_wiz_1": "",
-      "rst_clk_wiz_1_100M": ""
+      "rst_clk_wiz_1_100M": "",
+      "axi_uartlite_0": ""
     },
     "interface_ports": {
       "diff_clock_rtl": {
@@ -56,6 +56,27 @@
             "direction": "I"
           }
         }
+      },
+      "uart_rtl": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:uart:1.0",
+        "vlnv": "xilinx.com:interface:uart_rtl:1.0",
+        "hdl_attributes": {
+          "LOCKED": {
+            "value": "FALSE",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "RxD": {
+            "physical_name": "uart_rtl_rxd",
+            "direction": "I"
+          },
+          "TxD": {
+            "physical_name": "uart_rtl_txd",
+            "direction": "O"
+          }
+        }
       }
     },
     "ports": {
@@ -63,10 +84,6 @@
         "type": "rst",
         "direction": "I",
         "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
           "POLARITY": {
             "value": "ACTIVE_LOW"
           }
@@ -427,7 +444,7 @@
         "has_run_ip_tcl": "true",
         "parameters": {
           "NUM_MI": {
-            "value": "2"
+            "value": "3"
           },
           "NUM_SI": {
             "value": "1"
@@ -438,21 +455,14 @@
             "mode": "Slave",
             "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "parameters": {
-              "NUM_READ_OUTSTANDING": {
-                "value": "1"
-              },
-              "NUM_WRITE_OUTSTANDING": {
-                "value": "1"
-              }
-            },
             "bridges": [
               "M00_AXI",
-              "M01_AXI"
+              "M01_AXI",
+              "M02_AXI"
             ],
             "bd_attributes": {
               "BRIDGES": {
-                "value": "M00_AXI:M01_AXI",
+                "value": "M00_AXI:M01_AXI:M02_AXI",
                 "value_src": "auto"
               },
               "TYPE": {
@@ -465,26 +475,6 @@
             "mode": "Master",
             "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "parameters": {
-              "NUM_READ_OUTSTANDING": {
-                "value": "1"
-              },
-              "NUM_READ_THREADS": {
-                "value": "1"
-              },
-              "NUM_WRITE_OUTSTANDING": {
-                "value": "1"
-              },
-              "NUM_WRITE_THREADS": {
-                "value": "1"
-              },
-              "RUSER_BITS_PER_BYTE": {
-                "value": "0"
-              },
-              "WUSER_BITS_PER_BYTE": {
-                "value": "0"
-              }
-            },
             "bd_attributes": {
               "TYPE": {
                 "value": "interior",
@@ -496,26 +486,17 @@
             "mode": "Master",
             "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "parameters": {
-              "NUM_READ_OUTSTANDING": {
-                "value": "1"
-              },
-              "NUM_READ_THREADS": {
-                "value": "1"
-              },
-              "NUM_WRITE_OUTSTANDING": {
-                "value": "1"
-              },
-              "NUM_WRITE_THREADS": {
-                "value": "1"
-              },
-              "RUSER_BITS_PER_BYTE": {
-                "value": "0"
-              },
-              "WUSER_BITS_PER_BYTE": {
-                "value": "0"
+            "bd_attributes": {
+              "TYPE": {
+                "value": "interior",
+                "value_src": "default"
               }
-            },
+            }
+          },
+          "M02_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "bd_attributes": {
               "TYPE": {
                 "value": "interior",
@@ -602,9 +583,23 @@
         "xci_path": "ip\\AES128_System_rst_clk_wiz_1_100M_0\\AES128_System_rst_clk_wiz_1_100M_0.xci",
         "inst_hier_path": "rst_clk_wiz_1_100M",
         "has_run_ip_tcl": "true"
+      },
+      "axi_uartlite_0": {
+        "vlnv": "xilinx.com:ip:axi_uartlite:2.0",
+        "ip_revision": "39",
+        "xci_name": "AES128_System_axi_uartlite_0_0",
+        "xci_path": "ip\\AES128_System_axi_uartlite_0_0\\AES128_System_axi_uartlite_0_0.xci",
+        "inst_hier_path": "axi_uartlite_0",
+        "has_run_ip_tcl": "true"
       }
     },
     "interface_nets": {
+      "axi_uartlite_0_UART": {
+        "interface_ports": [
+          "uart_rtl",
+          "axi_uartlite_0/UART"
+        ]
+      },
       "diff_clock_rtl_1": {
         "interface_ports": [
           "diff_clock_rtl",
@@ -615,6 +610,12 @@
         "interface_ports": [
           "microblaze_riscv_0_axi_periph/S00_AXI",
           "microblaze_riscv_0/M_AXI_DP"
+        ]
+      },
+      "microblaze_riscv_0_axi_periph_M02_AXI": {
+        "interface_ports": [
+          "microblaze_riscv_0_axi_periph/M02_AXI",
+          "axi_uartlite_0/S_AXI"
         ]
       },
       "microblaze_riscv_0_debug": {
@@ -677,7 +678,8 @@
           "microblaze_riscv_0_axi_intc/processor_clk",
           "microblaze_riscv_0_local_memory/LMB_Clk",
           "mdm_1/S_AXI_ACLK",
-          "rst_clk_wiz_1_100M/slowest_sync_clk"
+          "rst_clk_wiz_1_100M/slowest_sync_clk",
+          "axi_uartlite_0/s_axi_aclk"
         ]
       },
       "microblaze_riscv_0_intr": {
@@ -710,7 +712,8 @@
           "rst_clk_wiz_1_100M/peripheral_aresetn",
           "microblaze_riscv_0_axi_periph/aresetn",
           "mdm_1/S_AXI_ARESETN",
-          "microblaze_riscv_0_axi_intc/s_axi_aresetn"
+          "microblaze_riscv_0_axi_intc/s_axi_aresetn",
+          "axi_uartlite_0/s_axi_aresetn"
         ]
       }
     },
@@ -719,6 +722,11 @@
         "address_spaces": {
           "Data": {
             "segments": {
+              "SEG_axi_uartlite_0_Reg": {
+                "address_block": "/axi_uartlite_0/S_AXI/Reg",
+                "offset": "0x40600000",
+                "range": "64K"
+              },
               "SEG_dlmb_bram_if_cntlr_Mem": {
                 "address_block": "/microblaze_riscv_0_local_memory/dlmb_bram_if_cntlr/SLMB/Mem",
                 "offset": "0x00000000",
