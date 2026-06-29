@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "D:/xilinx/2025.2/2025.2/Vitis/gnu/riscv/nt/bin/riscv64-unknown-elf-gcc.exe")
+set(CMAKE_C_COMPILER "D:/xilinx/2025.2/Vitis/gnu/riscv/nt/bin/riscv64-unknown-elf-gcc.exe")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_COMPILER_VERSION "13.4.0")
@@ -18,15 +18,15 @@ set(CMAKE_C_SIMULATE_ID "")
 set(CMAKE_C_COMPILER_FRONTEND_VARIANT "")
 set(CMAKE_C_SIMULATE_VERSION "")
 
-set(CMAKE_C_COMPILER_SYSROOT "D:/xilinx/2025.2/2025.2/Vitis/gnu/riscv/nt/bin//../riscv32-xilinx-elf/usr")
-set(CMAKE_COMPILER_SYSROOT "D:/xilinx/2025.2/2025.2/Vitis/gnu/riscv/nt/bin//../riscv32-xilinx-elf/usr")
+set(CMAKE_C_COMPILER_SYSROOT "D:/xilinx/2025.2/Vitis/gnu/riscv/nt/bin//../riscv32-xilinx-elf/usr")
+set(CMAKE_COMPILER_SYSROOT "D:/xilinx/2025.2/Vitis/gnu/riscv/nt/bin//../riscv32-xilinx-elf/usr")
 
 
 set(CMAKE_AR "riscv64-unknown-elf-ar")
-set(CMAKE_C_COMPILER_AR "D:/xilinx/2025.2/2025.2/Vitis/gnu/riscv/nt/bin/riscv64-unknown-elf-gcc-ar.exe")
-set(CMAKE_RANLIB "D:/xilinx/2025.2/2025.2/Vitis/gnu/riscv/nt/bin/riscv64-unknown-elf-ranlib.exe")
+set(CMAKE_C_COMPILER_AR "D:/xilinx/2025.2/Vitis/gnu/riscv/nt/bin/riscv64-unknown-elf-gcc-ar.exe")
+set(CMAKE_RANLIB "D:/xilinx/2025.2/Vitis/gnu/riscv/nt/bin/riscv64-unknown-elf-ranlib.exe")
 set(CMAKE_C_COMPILER_RANLIB "CMAKE_C_COMPILER_RANLIB-NOTFOUND")
-set(CMAKE_LINKER "D:/xilinx/2025.2/2025.2/Vitis/gnu/riscv/nt/bin/riscv64-unknown-elf-ld.exe")
+set(CMAKE_LINKER "D:/xilinx/2025.2/Vitis/gnu/riscv/nt/bin/riscv64-unknown-elf-ld.exe")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCC 1)
 set(CMAKE_C_COMPILER_LOADED 1)
@@ -67,7 +67,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "D:/AES128-MicroBlaze-V-FPGA/AES128_Platform/microblaze_riscv_0/standalone_microblaze_riscv_0/bsp/include;D:/xilinx/2025.2/2025.2/gnu/riscv/nt/x86_64-w64-mingw32/usr/lib/riscv32-xilinx-elf/gcc/riscv32-xilinx-elf/13.4.0/include;D:/xilinx/2025.2/2025.2/gnu/riscv/nt/x86_64-w64-mingw32/usr/lib/riscv32-xilinx-elf/gcc/riscv32-xilinx-elf/13.4.0/include-fixed;D:/xilinx/2025.2/2025.2/Vitis/gnu/riscv/nt/riscv32-xilinx-elf/usr/include")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "D:/AES128-MicroBlaze-V-FPGA/AES128_Platform/microblaze_riscv_0/standalone_microblaze_riscv_0/bsp/include;D:/xilinx/2025.2/gnu/riscv/nt/x86_64-w64-mingw32/usr/lib/riscv32-xilinx-elf/gcc/riscv32-xilinx-elf/13.4.0/include;D:/xilinx/2025.2/gnu/riscv/nt/x86_64-w64-mingw32/usr/lib/riscv32-xilinx-elf/gcc/riscv32-xilinx-elf/13.4.0/include-fixed;D:/xilinx/2025.2/Vitis/gnu/riscv/nt/riscv32-xilinx-elf/usr/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "")
 set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
