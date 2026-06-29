@@ -1,0 +1,82 @@
+{
+  "name": "AES128_Platform",
+  "type": "PLATFORM",
+  "configuration": {
+    "description": "",
+    "xsa": "D:/AES128-MicroBlaze-V-FPGA/04_Vivado_Project/project_1/AES128_System_wrapper.xsa",
+    "xsaPathInPlatform": "AES128_Platform/hw/AES128_System_wrapper.xsa",
+    "emulationXsa": "",
+    "emulationXsaPathInPlatform": "",
+    "isCustomFSBL": false,
+    "fsblPath": "",
+    "pmufwElf": "",
+    "flow": "EMBEDDED",
+    "processorsMap": {
+      "microblaze_riscv_0": "microblaze_riscv",
+      "ps7_cortexa9_0": "ps7_cortexa9",
+      "ps7_cortexa9_1": "ps7_cortexa9"
+    },
+    "supportedOS": [
+      "standalone",
+      "linux",
+      "freertos"
+    ],
+    "supportedFamily": "zynq",
+    "stdGenHookList": [
+      {
+        "key": "VITIS_SDT_REPO",
+        "value": ""
+      },
+      {
+        "key": "VITIS_SDT_BOARD_DTS",
+        "value": ""
+      },
+      {
+        "key": "VITIS_SDT_INCLUDE_DTS",
+        "value": ""
+      },
+      {
+        "key": "-dt_overlay",
+        "value": "0"
+      },
+      {
+        "key": "custom_dtsi",
+        "value": ""
+      }
+    ],
+    "componentType": "PLATFORM",
+    "domains": [
+      {
+        "name": "zynq_fsbl",
+        "displayName": "zynq_fsbl",
+        "processor": "ps7_cortexa9_0",
+        "cpuType": "cortex-a9",
+        "cpuInstance": "ps7_cortexa9_0",
+        "os": "standalone",
+        "appTemplate": "zynq_fsbl",
+        "isBootDomain": true,
+        "qemuData": "resources/zynq_fsbl/qemu",
+        "qemuArgsFile": "resources/zynq_fsbl/qemu/qemu_args.txt",
+        "pmcQemuArgsFile": "",
+        "isBSPGenReq": false
+      },
+      {
+        "name": "standalone_microblaze_riscv_0",
+        "displayName": "standalone_microblaze_riscv_0",
+        "processor": "microblaze_riscv_0",
+        "cpuType": "microblaze_riscv",
+        "cpuInstance": "microblaze_riscv_0",
+        "os": "standalone",
+        "appTemplate": "empty_application",
+        "isBootDomain": false,
+        "qemuData": "resources/standalone_microblaze_riscv_0/qemu",
+        "qemuArgsFile": "resources/standalone_microblaze_riscv_0/qemu/qemu_args.txt",
+        "pmcQemuArgsFile": "",
+        "isBSPGenReq": false
+      }
+    ],
+    "emptyToolchainConfiguration": []
+  },
+  "useSysrootToolchain": false,
+  "templateFlow": "VITIS"
+}

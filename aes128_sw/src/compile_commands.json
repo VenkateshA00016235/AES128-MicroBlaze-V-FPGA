@@ -1,0 +1,7 @@
+[
+{
+  "directory": "D:/AES128-MicroBlaze-V-FPGA/aes128_sw/src/.compile_commands",
+  "command": "D:\\xilinx\\2025.2\\Vitis\\gnu\\riscv\\nt\\bin\\riscv64-unknown-elf-gcc.exe -ID:/AES128-MicroBlaze-V-FPGA/aes128_sw/src -isystem D:/AES128-MicroBlaze-V-FPGA/AES128_Platform/export/AES128_Platform/sw/standalone_microblaze_riscv_0/include -isystem D:/xilinx/2025.2/gnu/riscv/nt/x86_64-w64-mingw32/usr/lib/riscv32-xilinx-elf/gcc/riscv32-xilinx-elf/13.4.0/include -isystem D:/xilinx/2025.2/gnu/riscv/nt/x86_64-w64-mingw32/usr/lib/riscv32-xilinx-elf/gcc/riscv32-xilinx-elf/13.4.0/include-fixed -isystem D:/xilinx/2025.2/Vitis/gnu/riscv/nt/riscv32-xilinx-elf/usr/include   -march=rv32i_zicsr_zifencei -mabi=ilp32 -DSDT  -MMD -MP  -specs=D:/AES128-MicroBlaze-V-FPGA/AES128_Platform/export/AES128_Platform/sw/standalone_microblaze_riscv_0/Xilinx.spec -ID:/AES128-MicroBlaze-V-FPGA/AES128_Platform/export/AES128_Platform/sw/standalone_microblaze_riscv_0/include -Wall -Wextra      -O0  -g3     -U__clang__ -o CMakeFiles\\aes128_sw.elf.dir\\dummy.c.obj -c D:\\AES128-MicroBlaze-V-FPGA\\aes128_sw\\src\\dummy.c",
+  "file": "D:\\AES128-MicroBlaze-V-FPGA\\aes128_sw\\src\\dummy.c"
+}
+]

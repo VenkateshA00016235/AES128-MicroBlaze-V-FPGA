@@ -1,0 +1,12 @@
+axi_uartlite_0:
+- axi_uartlite
+- uartlite
+mdm_1:
+- mdm_riscv
+- uartlite
+microblaze_riscv_0_axi_intc:
+- axi_intc
+- intc
+microblaze_riscv_0_local_memory_dlmb_bram_if_cntlr:
+- lmb_bram_if_cntlr
+- bram
