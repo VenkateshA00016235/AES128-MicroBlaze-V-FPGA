@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x615ECB4DEEC8D123",
+      "boundary_crc": "0x615ECB4DA5089AD7",
       "device": "xc7z010clg400-1",
       "gen_directory": "../../../../project_1.gen/sources_1/bd/AES128_System",
       "name": "AES128_System",
@@ -26,7 +26,9 @@
       "clk_wiz_1": "",
       "rst_clk_wiz_1_100M": "",
       "axi_uartlite_0": "",
-      "processing_system7_0": ""
+      "processing_system7_0": "",
+      "rst_ps7_0_100M": "",
+      "xlconstant_0": ""
     },
     "interface_ports": {
       "diff_clock_rtl": {
@@ -636,7 +638,7 @@
             "value": "3"
           },
           "NUM_SI": {
-            "value": "2"
+            "value": "3"
           }
         },
         "interface_ports": {
@@ -678,6 +680,34 @@
               },
               "NUM_WRITE_OUTSTANDING": {
                 "value": "8"
+              }
+            },
+            "bridges": [
+              "M00_AXI",
+              "M01_AXI",
+              "M02_AXI"
+            ],
+            "bd_attributes": {
+              "BRIDGES": {
+                "value": "M00_AXI:M01_AXI:M02_AXI",
+                "value_src": "auto"
+              },
+              "TYPE": {
+                "value": "interior",
+                "value_src": "default"
+              }
+            }
+          },
+          "S02_AXI": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "1"
               }
             },
             "bridges": [
@@ -840,11 +870,59 @@
           "C_ADDR_SIZE": {
             "value": "32"
           },
+          "C_DBG_MEM_ACCESS": {
+            "value": "1"
+          },
           "C_M_AXI_ADDR_WIDTH": {
             "value": "32"
           },
+          "C_USE_BSCAN": {
+            "value": "0"
+          },
           "C_USE_UART": {
             "value": "1"
+          }
+        },
+        "interface_ports": {
+          "M_AXI": {
+            "bd_attributes": {
+              "TYPE": {
+                "value": "END_POINT",
+                "value_src": "auto"
+              }
+            },
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Data",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
+            }
+          },
+          "LMB_0": {
+            "bd_attributes": {
+              "TYPE": {
+                "value": "END_POINT",
+                "value_src": "auto"
+              }
+            },
+            "vlnv": "xilinx.com:interface:lmb_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Data",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
+            }
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "Data": {
+              "range": "4G",
+              "width": "32"
+            }
           }
         }
       },
@@ -2657,6 +2735,22 @@
             }
           }
         }
+      },
+      "rst_ps7_0_100M": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "ip_revision": "17",
+        "xci_name": "AES128_System_rst_ps7_0_100M_0",
+        "xci_path": "ip\\AES128_System_rst_ps7_0_100M_0\\AES128_System_rst_ps7_0_100M_0.xci",
+        "inst_hier_path": "rst_ps7_0_100M",
+        "has_run_ip_tcl": "true"
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "10",
+        "xci_name": "AES128_System_xlconstant_0_1",
+        "xci_path": "ip\\AES128_System_xlconstant_0_1\\AES128_System_xlconstant_0_1.xci",
+        "inst_hier_path": "xlconstant_0",
+        "has_run_ip_tcl": "true"
       }
     },
     "interface_nets": {
@@ -2670,6 +2764,12 @@
         "interface_ports": [
           "diff_clock_rtl",
           "clk_wiz_1/CLK_IN1_D"
+        ]
+      },
+      "mdm_1_M_AXI": {
+        "interface_ports": [
+          "mdm_1/M_AXI",
+          "microblaze_riscv_0_axi_periph/S02_AXI"
         ]
       },
       "microblaze_riscv_0_axi_dp": {
@@ -2776,13 +2876,15 @@
         "ports": [
           "processing_system7_0/FCLK_CLK0",
           "processing_system7_0/M_AXI_GP0_ACLK",
-          "microblaze_riscv_0_axi_periph/aclk1"
+          "microblaze_riscv_0_axi_periph/aclk1",
+          "mdm_1/M_AXI_ACLK",
+          "rst_ps7_0_100M/slowest_sync_clk"
         ]
       },
-      "reset_rtl_1": {
+      "processing_system7_0_FCLK_RESET0_N": {
         "ports": [
-          "reset_rtl",
-          "rst_clk_wiz_1_100M/ext_reset_in"
+          "processing_system7_0/FCLK_RESET0_N",
+          "rst_ps7_0_100M/ext_reset_in"
         ]
       },
       "rst_clk_wiz_1_100M_bus_struct_reset": {
@@ -2805,6 +2907,18 @@
           "mdm_1/S_AXI_ARESETN",
           "microblaze_riscv_0_axi_intc/s_axi_aresetn",
           "axi_uartlite_0/s_axi_aresetn"
+        ]
+      },
+      "rst_ps7_0_100M_peripheral_aresetn": {
+        "ports": [
+          "rst_ps7_0_100M/peripheral_aresetn",
+          "mdm_1/M_AXI_ARESETN"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "rst_clk_wiz_1_100M/ext_reset_in"
         ]
       }
     },
@@ -2843,6 +2957,29 @@
                 "offset": "0x00000000",
                 "range": "32K",
                 "offset_high_param": "C_HIGHADDR"
+              }
+            }
+          }
+        }
+      },
+      "/mdm_1": {
+        "address_spaces": {
+          "Data": {
+            "segments": {
+              "SEG_axi_uartlite_0_Reg": {
+                "address_block": "/axi_uartlite_0/S_AXI/Reg",
+                "offset": "0x40600000",
+                "range": "64K"
+              },
+              "SEG_mdm_1_Reg": {
+                "address_block": "/mdm_1/S_AXI/Reg",
+                "offset": "0x44A00000",
+                "range": "64K"
+              },
+              "SEG_microblaze_riscv_0_axi_intc_Reg": {
+                "address_block": "/microblaze_riscv_0_axi_intc/S_AXI/Reg",
+                "offset": "0x41200000",
+                "range": "64K"
               }
             }
           }
