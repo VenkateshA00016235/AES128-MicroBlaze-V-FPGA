@@ -19,3 +19,31 @@
 
 _ide/logs
 _ide/.wsdata
+
+
+
+# Vivado generated folders
+**/.Xil/
+**/*.cache/
+**/*.gen/
+**/*.runs/
+**/*.sim/
+**/*.ip_user_files/
+
+# Vivado temporary files
+*.jou
+*.log
+*.str
+*.wdb
+*.dcp
+
+# Vitis generated folders
+_ide/
+.rigel_lopper/
+**/build/
+**/Debug/
+**/Release/
+
+# Windows files
+Thumbs.db
+desktop.ini
