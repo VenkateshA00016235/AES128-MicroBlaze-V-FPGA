@@ -47,3 +47,16 @@ _ide/
 # Windows files
 Thumbs.db
 desktop.ini
+
+
+
+# IDE and language-server caches
+**/.cache/
+**/.clangd/
+_ide/
+
+# Vivado hardware-manager output
+**/*.hw/
+
+# Generated Vivado checkpoints
+*.dcp
