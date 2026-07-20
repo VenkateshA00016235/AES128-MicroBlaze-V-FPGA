@@ -60,3 +60,11 @@ _ide/
 
 # Generated Vivado checkpoints
 *.dcp
+
+# Unused ARM software projects
+/01_Software_AES128/AES128_ARM_Platform/
+/01_Software_AES128/aes128_arm/
+
+# ARM boot outputs
+/05_Results/BOOT.bin
+/05_Results/output_arm.bif
