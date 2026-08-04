@@ -1,0 +1,5 @@
+create libxil.a
+addlib D:/AES128-MicroBlaze-V-FPGA/01_Software_AES128/AES128_Platform/microblaze_riscv_0/standalone_microblaze_riscv_0/bsp/libsrc/build_configs/gen_bsp/libsrc/uartlite/src/libuartlite.a
+addlib D:/AES128-MicroBlaze-V-FPGA/01_Software_AES128/AES128_Platform/microblaze_riscv_0/standalone_microblaze_riscv_0/bsp/libsrc/build_configs/gen_bsp/libsrc/bram/src/libbram.a
+save
+end

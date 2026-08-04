@@ -1,0 +1,43 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.15883",
+   "Default View_TopLeft":"390,-260",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port UART -pg 1 -lvl 6 -x 1750 -y -160 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x -20 -y 140 -defaultsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x -20 -y 70 -defaultsOSRD
+preplace inst microblaze_riscv_0 -pg 1 -lvl 3 -x 760 -y -100 -defaultsOSRD
+preplace inst microblaze_riscv_0_local_memory -pg 1 -lvl 4 -x 1230 -y -110 -defaultsOSRD
+preplace inst mdm_1 -pg 1 -lvl 3 -x 760 -y 200 -defaultsOSRD
+preplace inst clk_wiz_1 -pg 1 -lvl 3 -x 760 -y 60 -defaultsOSRD
+preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 4 -x 1230 -y 70 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 2 -x 340 -y -150 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 5 -x 1570 -y -20 -defaultsOSRD
+preplace inst aes_axi_slave_0 -pg 1 -lvl 1 -x 110 -y -140 -defaultsOSRD
+preplace netloc clk_in1_0_1 1 0 3 NJ 70 N 70 NJ
+preplace netloc clk_wiz_1_locked 1 3 1 1020 70n
+preplace netloc mdm_1_debug_sys_rst 1 2 2 480 300 1060
+preplace netloc microblaze_riscv_0_Clk 1 0 5 10 -60 220 -60 460 -10 1040 -210 1430
+preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 3 2 1060 -200 1400J
+preplace netloc rst_clk_wiz_1_100M_mb_reset 1 2 3 470 -220 N -220 1410
+preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 0 5 0 -50 230 60 450J 320 NJ 320 1430
+preplace netloc reset_1 1 0 4 NJ 140 220 310 NJ 310 1050
+preplace netloc axi_smc_M00_AXI 1 1 5 230 -250 NJ -250 NJ -250 NJ -250 1710
+preplace netloc axi_uartlite_0_UART 1 2 4 460J -230 NJ -230 NJ -230 1730J
+preplace netloc microblaze_riscv_0_M_AXI_DP 1 3 2 1050J -30 1420J
+preplace netloc microblaze_riscv_0_debug 1 2 2 500 280 1020J
+preplace netloc microblaze_riscv_0_dlmb_1 1 3 1 1020 -140n
+preplace netloc microblaze_riscv_0_ilmb_1 1 3 1 1030 -120n
+preplace netloc axi_smc_M01_AXI 1 0 6 10 -240 NJ -240 NJ -240 NJ -240 NJ -240 1720
+preplace netloc axi_smc_M02_AXI 1 2 4 490 290 NJ 290 NJ 290 1710
+levelinfo -pg 1 -20 110 340 760 1230 1570 1750
+pagesize -pg 1 -db -bbox -sgen -140 -340 1840 330
+"
+}
+{
+   "da_axi4_cnt":"3",
+   "da_board_cnt":"2",
+   "da_microblaze_riscv_cnt":"1"
+}
