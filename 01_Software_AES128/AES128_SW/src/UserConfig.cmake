@@ -35,6 +35,9 @@ set(USER_INCLUDE_DIRECTORIES
 #Example 3: Adding ${MY_ENV}/data/helloworld.c are expanded using project-specific environment settings.
 set(USER_COMPILE_SOURCES
 "main.c"
+"timer_utils.c"
+"uart_utils.c"
+"aes_sw.c"
 )
 
 # -----------------------------------------

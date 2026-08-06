@@ -6,7 +6,7 @@ include(${CMAKE_SOURCE_DIR}/Empty_applicationExample.cmake)
 # Include any additional CMake files here
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/UserConfig.cmake)
-set(APP_NAME MicroBlazeV_Test)
+set(APP_NAME AES128_SW)
 project(${APP_NAME})
 
 find_package(common)
